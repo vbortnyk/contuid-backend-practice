@@ -37,4 +37,4 @@ jobs:
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:latest
       
       - name: Trigger deploy wokflow
-        run: echo "${{ github.event.workflow_run.name }}""
+        run: echo "${{ github.event.workflow_run.name }}"
