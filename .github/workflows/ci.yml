@@ -34,7 +34,7 @@ jobs:
           username: ${{ vars.GH_USERNAME }}
           password: ${{ secrets.GH_PAT }}   
       
-      - name: Build and push
+      - name: Build and push to GHCR
         uses: docker/build-push-action@v7
         with:
           context: .
