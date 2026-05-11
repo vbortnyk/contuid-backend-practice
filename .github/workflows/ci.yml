@@ -49,3 +49,4 @@ jobs:
     secrets:
       GH_USERNAME: ${{ vars.GH_USERNAME }}
       GH_PAT: ${{ secrets.GH_PAT }}
+      sha: ${{ github.sha }}
