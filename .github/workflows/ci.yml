@@ -40,6 +40,12 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:latest
-             
-      - name: Logging
-        run: echo "triggering workflow_run"
+        
+  deploy:
+    needs: build
+    uses: /vbortnyk/conduit-deployment-practice/.github/workflows/deployment-submodule.yml@main
+    with:
+      image: ghcr.io/org/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
+    secrets:
+      GH_USERNAME: ${{ vars.GH_USERNAME }}
+      GH_PAT: ${{ secrets.GH_PAT }}
