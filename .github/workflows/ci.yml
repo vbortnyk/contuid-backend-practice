@@ -41,5 +41,5 @@ jobs:
           push: true
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:latest
              
-      - name: Loggin
+      - name: Logging
         run: echo "triggering workflow_run"
