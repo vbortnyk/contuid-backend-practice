@@ -40,4 +40,6 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:latest
-             echo "triggering workflow_run"
+             
+      - name: Loggin
+        run: echo "triggering workflow_run"
