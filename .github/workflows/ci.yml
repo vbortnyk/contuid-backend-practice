@@ -43,7 +43,7 @@ jobs:
         
   deploy:
     needs: build
-    uses: /vbortnyk/conduit-deployment-practice/.github/workflows/deployment-submodule.yml@main
+    uses: vbortnyk/conduit-deployment-practice/.github/workflows/deployment-submodule.yml@main
     with:
       image: ghcr.io/org/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
     secrets:
