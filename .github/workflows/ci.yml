@@ -41,8 +41,7 @@ jobs:
     needs: build
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodule.yml@main
     with:
-      image: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}
-      tag: ${{ github.sha }}
+      service: "backend"
       username: ${{ vars.GH_USERNAME }}
     secrets:
       GH_PAT: ${{ secrets.GH_PAT }}
