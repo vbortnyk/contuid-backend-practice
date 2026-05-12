@@ -48,5 +48,4 @@ jobs:
       image: ghcr.io/org/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
       username: ${{ vars.GH_USERNAME }}
     secrets:
-      GH_USERNAME: ${{ vars.GH_USERNAME }}
       GH_PAT: ${{ secrets.GH_PAT }}
