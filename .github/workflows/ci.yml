@@ -35,15 +35,16 @@ jobs:
         with:
           context: .
           push: true
-          
+
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
         
   deploy:
     needs: build
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodule.yml@main
+    secrets: inherit
     with:
       service: "backend"
       tag: ${{ github.sha }}
       username: ${{ vars.GH_USERNAME }}
-    secrets:
-      GH_PAT: ${{ secrets.GH_PAT }}
+    # secrets:
+    #   GH_PAT: ${{ secrets.GH_PAT }}
