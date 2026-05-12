@@ -42,6 +42,7 @@ jobs:
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodule.yml@main
     with:
       service: "backend"
+      tag: ${{ github.sha }}
       username: ${{ vars.GH_USERNAME }}
     secrets:
       GH_PAT: ${{ secrets.GH_PAT }}
