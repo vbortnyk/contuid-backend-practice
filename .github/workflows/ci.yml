@@ -39,13 +39,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:latest
+          tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
         
   deploy:
     needs: build
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodule.yml@main
     with:
-      image: ghcr.io/org/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
+      image: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_IMAGE_NAME }}:${{ github.sha }}
       username: ${{ vars.GH_USERNAME }}
     secrets:
       GH_PAT: ${{ secrets.GH_PAT }}
