@@ -32,7 +32,7 @@ jobs:
           push: true
           tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_SERVICE_NAME }}:${{ github.sha }}
         
-  deploy:
+  call-deploy-workflow:
     needs: build
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodules.yml@main
     secrets: inherit
