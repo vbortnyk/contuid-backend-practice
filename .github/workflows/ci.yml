@@ -16,7 +16,8 @@ jobs:
     with:
       service: ${{ vars.BACKEND_SERVICE_NAME }}
       tag: ${{ github.sha }}
-      username: ${{ vars.GH_USERNAME }}  
+      gh-username: ${{ vars.GH_USERNAME }}  
+      vps-username: ${{ vars.VPS_USERNAME }}
 
 
 # jobs:
