@@ -18,6 +18,7 @@ jobs:
       tag: ${{ github.sha }}
       gh-username: ${{ vars.GH_USERNAME }}  
       vps-username: ${{ vars.VPS_USERNAME }}
+      vps-host: ${{ vars.VPS_HOST }}
 
 # jobs:
 #   build:
