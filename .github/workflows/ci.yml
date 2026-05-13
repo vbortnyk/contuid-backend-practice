@@ -14,7 +14,6 @@ jobs:
     uses: vbortnyk/conduit-practice/.github/workflows/deployment-submodules.yml@main
     secrets: inherit
     with:
-      
       service: ${{ vars.BACKEND_SERVICE_NAME}}
       tag: ${{ github.sha }}
       username: ${{ vars.GH_USERNAME }}  
