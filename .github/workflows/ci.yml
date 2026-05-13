@@ -19,7 +19,6 @@ jobs:
       gh-username: ${{ vars.GH_USERNAME }}  
       vps-username: ${{ vars.VPS_USERNAME }}
 
-
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
