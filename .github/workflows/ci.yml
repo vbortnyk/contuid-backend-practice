@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_SERVICE_NAME }}:${{ github.sha }}
+          tags: ghcr.io/${{ vars.GH_USERNAME }}/${{ vars.BACKEND_REPO_NAME }}:${{ github.sha }}
         
   call-deploy-workflow:
     needs: build
